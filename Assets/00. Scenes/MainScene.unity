@@ -1130,6 +1130,7 @@ GameObject:
   - component: {fileID: 1121694630}
   - component: {fileID: 1121694631}
   - component: {fileID: 1121694632}
+  - component: {fileID: 1121694633}
   m_Layer: 0
   m_Name: Main
   m_TagString: Untagged
@@ -1176,6 +1177,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3b097d327295b749b2e32ef364ca120, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1121694633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1121694629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 009f807ed31faf941abaedb4587aeff3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _metaDatas:
+  - {fileID: 11400000, guid: 5671ad932da004448956cb4a547cb279, type: 2}
+  - {fileID: 11400000, guid: 5461ad9275aca0443a07164fc1708c01, type: 2}
+  - {fileID: 11400000, guid: 17dfdd2312f410148b4c08e0e24afb7c, type: 2}
+  - {fileID: 11400000, guid: 7bc79fca37a825e4cb4a58da51c6d7e5, type: 2}
+  - {fileID: 11400000, guid: 1a3d18739fbb3914eafecd14c9e58b90, type: 2}
+  - {fileID: 11400000, guid: ba9fd9775acdb1f4c93910f02aef6fa1, type: 2}
+  - {fileID: 11400000, guid: fb0189f6995df6a4ab175d6a9950a3ec, type: 2}
 --- !u!4 &1146676878 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5963937743390997973, guid: 7042f8fe21debc944b5bdc894f478d63,
