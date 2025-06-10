@@ -75,6 +75,11 @@ public class CurrencyManager : MonoBehaviour
         // 다양한 이유로 여기에 규칙이 들어가기도한다.
 
         _repository.Save(ToDtoList());
+
+        if (type == ECurrencyType.Gold)
+        {
+            AchievementManager.Instance.Increase(EAchievementCondition.GoldCollect, value);
+        }
         
         OnDataChanged?.Invoke();
     }

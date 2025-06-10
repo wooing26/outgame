@@ -66,7 +66,7 @@ public class Achievement
         RewardAmount = rewardAmount;
     }
 
-    public Achievement(AchievementSO metadata)
+    public Achievement(AchievementSO metadata, AchievementSaveData saveData)
     {
         if (string.IsNullOrEmpty(metadata.ID))
         {
@@ -88,6 +88,10 @@ public class Achievement
         {
             throw new Exception("업적 보상 값은 0보다 커야합니다.");
         }
+        if (saveData.CurrentValue <0)
+        {
+            throw new Exception("업적 진행 값은 0보다 커야합니다.");
+        }
 
         ID = metadata.ID;
         Name = metadata.Name;
@@ -96,6 +100,9 @@ public class Achievement
         GoalValue = metadata.GoalValue;
         RewardCurrencyType = metadata.RewardCurrencyType;
         RewardAmount = metadata.RewardAmount;
+
+        _currentValue = saveData.CurrentValue;
+        _rewardClaimed = saveData.RewardClaimed;
     }
 
     public void Increase(int value)
@@ -106,5 +113,22 @@ public class Achievement
         }
           
         _currentValue += value;
+    }
+
+    public bool CanClaimReward()
+    {
+        return _rewardClaimed == false && _currentValue >= GoalValue;
+    }
+
+    public bool TryClaimReward()
+    {
+        if(!CanClaimReward())
+        {
+            return false;
+        }
+
+        _rewardClaimed = true;
+
+        return true;
     }
 }

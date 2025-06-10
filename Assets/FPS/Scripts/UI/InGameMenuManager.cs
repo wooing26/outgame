@@ -29,6 +29,8 @@ namespace Unity.FPS.UI
         [Tooltip("GameObject for the controls")]
         public GameObject ControlImage;
 
+        public GameObject UI_Achievement;
+
         PlayerInputHandler m_PlayerInputsHandler;
         Health m_PlayerHealth;
         FramerateCounter m_FramerateCounter;
@@ -106,6 +108,7 @@ namespace Unity.FPS.UI
         void SetPauseMenuActivation(bool active)
         {
             MenuRoot.SetActive(active);
+            UI_Achievement.SetActive(active);
 
             if (MenuRoot.activeSelf)
             {
