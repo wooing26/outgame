@@ -4,6 +4,6 @@ using System;
 public struct AchievementSaveData
 {
     public string ID;
-    public int CurrentValue;
-    public bool RewardClaimed;
+    public int    CurrentValue;
+    public bool   RewardClaimed;
 }

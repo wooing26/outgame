@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class AchievementManager : MonoBehaviour
 {
-    public static AchievementManager Instance;
+    public static AchievementManager    Instance;
 
     [SerializeField]
-    private List<AchievementSO> _metaDatas;
+    private List<AchievementSO>         _metaDatas;
 
-    private List<Achievement> _achievements;
-    public List<AchievementDTO> Achievements => _achievements.ConvertAll((a)=>new AchievementDTO(a));
+    private List<Achievement>           _achievements;
+    public List<AchievementDTO>         Achievements => _achievements.ConvertAll((a) => new AchievementDTO(a));
 
-    private AchievementRepository _repository;
+    private AchievementRepository       _repository;
 
-    public event Action OnDataChanged;
+    public event Action                 OnDataChanged;
     public event Action<AchievementDTO> OnNewAchievementRewarded;
     
     private void Awake()

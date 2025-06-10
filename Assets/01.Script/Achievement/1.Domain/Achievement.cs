@@ -18,20 +18,20 @@ public class Achievement
     // 최종 목적: 자기서술형
 
     // 데이터
-    public readonly string ID; 
-    public readonly string Name;
-    public readonly string Description;
+    public readonly string                ID; 
+    public readonly string                Name;
+    public readonly string                Description;
     public readonly EAchievementCondition Condition;
-    public int GoalValue;
-    public ECurrencyType RewardCurrencyType;
-    public int RewardAmount;
+    public int                            GoalValue;
+    public ECurrencyType                  RewardCurrencyType;
+    public int                            RewardAmount;
 
     // 상태
-    private int _currentValue;
-    public int CurrentValue => _currentValue;
+    private int                           _currentValue;
+    public int                            CurrentValue  => _currentValue;
 
-    private bool _rewardClaimed;
-    public bool RewardClaimed => _rewardClaimed;
+    private bool                          _rewardClaimed;
+    public bool                           RewardClaimed => _rewardClaimed;
 
     // 생성자
     public Achievement(string id, string name, string description, EAchievementCondition condition, int goalValue, ECurrencyType rewardCurrencyType, int rewardAmount)
